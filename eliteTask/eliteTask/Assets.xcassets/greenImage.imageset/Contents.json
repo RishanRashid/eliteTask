@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Lush-Green-Trees-Surrounding-a-Serene-River-Beautiful-Nature-Background_2471692_wh1200.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
