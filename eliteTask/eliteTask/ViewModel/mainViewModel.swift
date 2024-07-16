@@ -7,34 +7,32 @@
 
 import Foundation
 
-
 class mainViewModel {
-    private var profiles: [Profile] = []
-    var onProfilesUpdated: (() -> Void)?
-    var onError: ((String) -> Void)?
-    
-    func fetchProfiles() {
-        ProfileService.shared.fetchProfiles { [weak self] result in
-            switch result {
-            case .success(let profiles):
-                self?.profiles = profiles
-                DispatchQueue.main.async {
+    private let profileService = serviceFile.shared
+    private(set) var profiles: [employeeProfile] = []
+        
+        var onProfilesUpdated: (() -> Void)?
+        var onError: ((String) -> Void)?
+        
+        func fetchProfiles() {
+            profileService.fetchProfiles { [weak self] result in
+                switch result {
+                case .success(let employeesModel):
+                    self?.profiles = employeesModel.profiles
+                    print("Received Profiles: \(self?.profiles ?? [])") // Print received profiles
                     self?.onProfilesUpdated?()
-                }
-            case .failure(let error):
-                DispatchQueue.main.async {
+                case .failure(let error):
                     self?.onError?(error.localizedDescription)
+                    print("Error fetching profiles: \(error.localizedDescription)")
                 }
             }
         }
+        
+        func getProfile(at index: Int) -> employeeProfile {
+            return profiles[index]
+        }
+        
+        var numberOfProfiles: Int {
+            return profiles.count
+        }
     }
-    
-    func getProfile(at index: Int) -> Profile? {
-        guard index >= 0 && index < profiles.count else { return nil }
-        return profiles[index]
-    }
-    
-    var numberOfProfiles: Int {
-        return profiles.count
-    }
-}

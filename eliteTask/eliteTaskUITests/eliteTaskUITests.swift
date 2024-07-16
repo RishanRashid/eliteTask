@@ -7,34 +7,49 @@
 
 import XCTest
 
-final class eliteTaskUITests: XCTestCase {
+class eliteTaskUITests: XCTestCase {
+
+    var app: XCUIApplication!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app = XCUIApplication()
+        app.launch()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        app = nil
     }
 
     func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
+        // Test navigation to a specific screen or view controller
+        let profileListNavigationBar = app.navigationBars["Profiles"]
+        XCTAssertTrue(profileListNavigationBar.exists, "Profile list screen should be visible")
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        // Test tapping on a table view cell (assuming your profiles are displayed in a table view)
+        let profileCell = app.tables.cells.element(boundBy: 0)
+        XCTAssertTrue(profileCell.waitForExistence(timeout: 5), "Profile cell should appear")
+        profileCell.tap()
+
+        // Example of verifying elements on a detail screen
+        let nameLabel = app.staticTexts["profileNameLabel"]
+        XCTAssertTrue(nameLabel.exists, "Profile name label should be visible")
+        XCTAssertEqual(nameLabel.label, "John Doe", "Profile name should match expected value")
+
+        // Example of tapping on a button and verifying a new screen
+        let editButton = app.buttons["EditProfileButton"]
+        XCTAssertTrue(editButton.exists, "Edit button should be visible")
+        editButton.tap()
+
+        let editScreenNavigationBar = app.navigationBars["Edit Profile"]
+        XCTAssertTrue(editScreenNavigationBar.exists, "Edit profile screen should appear")
     }
 
     func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
+        // Measure how long it takes to launch the application
+        if #available(macOS 10.15, iOS 13.0, *) {
             measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
+                app.launch()
             }
         }
     }

@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,11 +14,12 @@
             <objects>
                 <tabBarController id="Rii-pf-jBC" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dN0-36-K1w">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="dN0-36-K1w">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" systemColor="systemGray2Color"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="UyK-zT-icv" kind="relationship" relationship="viewControllers" id="AZV-ed-S8S"/>
@@ -35,12 +37,12 @@
             <objects>
                 <viewController id="UyK-zT-icv" customClass="cardViewController" customModule="eliteTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bJ2-0g-9yN">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h0c-tV-W4s">
                                 <rect key="frame" x="10" y="160" width="363" height="586"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rjl-lR-lmE">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -67,7 +69,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Card" image="person" catalog="system" selectedImage="person" id="MTO-RA-z9w">
-                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="badgeColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="collectionView" destination="h0c-tV-W4s" id="I3M-s5-7uL"/>
@@ -82,11 +84,11 @@
             <objects>
                 <viewController id="dZz-aK-SGD" customClass="prosepectViewController" customModule="eliteTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="138-cX-rgk">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="underConstruction" translatesAutoresizingMaskIntoConstraints="NO" id="U5z-ud-8JT">
-                                <rect key="frame" x="59" y="272" width="274" height="308"/>
+                                <rect key="frame" x="59" y="272" width="274" height="225"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wem-i7-mDa"/>
@@ -98,7 +100,8 @@
                             <constraint firstItem="U5z-ud-8JT" firstAttribute="centerX" secondItem="138-cX-rgk" secondAttribute="centerX" constant="-0.5" id="hbL-MD-DJI"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Prospects" image="gear" catalog="system" selectedImage="gear" id="Mym-be-0rP">
+                    <tabBarItem key="tabBarItem" title="Prospects" selectedImage="gear" catalog="system" id="Mym-be-0rP">
+                        <imageReference key="image" image="gear" catalog="system" symbolScale="small" renderingMode="original"/>
                         <color key="badgeColor" systemColor="labelColor"/>
                     </tabBarItem>
                 </viewController>
@@ -111,11 +114,11 @@
             <objects>
                 <viewController id="6fM-xn-I3k" customClass="shareViewController" customModule="eliteTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qxi-T1-liX">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="underConstruction" translatesAutoresizingMaskIntoConstraints="NO" id="G8C-I8-FZw">
-                                <rect key="frame" x="16" y="209" width="361" height="434"/>
+                                <rect key="frame" x="16" y="209" width="361" height="351"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ooq-p3-Xch"/>
@@ -138,11 +141,11 @@
             <objects>
                 <viewController id="QJS-Z9-LGc" customClass="settingsViewController" customModule="eliteTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GR2-ir-zp3">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="underConstruction" translatesAutoresizingMaskIntoConstraints="NO" id="OJY-Wz-NmS">
-                                <rect key="frame" x="16" y="208" width="361" height="436"/>
+                                <rect key="frame" x="16" y="208" width="361" height="353"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MwC-NC-nV3"/>
@@ -171,11 +174,8 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

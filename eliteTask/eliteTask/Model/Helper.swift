@@ -11,14 +11,19 @@ import UIKit
 extension UIView {
     
     func applyShadow() {
-        layer.shadowOpacity = 1.5
-            layer.shadowOffset = CGSize(width: 3, height: 6)
-            layer.shadowRadius = 8
+            layer.masksToBounds = false
+            layer.shadowOpacity = 0.5
+            layer.shadowOffset = CGSize(width: 0, height: 4)
+            layer.shadowRadius = 6
             
             if superview != nil {
                 layer.shadowColor = UIColor.gray.cgColor
             } else {
-                layer.shadowColor = UIColor.black.cgColor 
+                layer.shadowColor = UIColor.black.cgColor
+            }
+            
+            if backgroundColor == nil {
+                backgroundColor = .white 
             }
         }
     

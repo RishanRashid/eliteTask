@@ -15,8 +15,8 @@ class cardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionSetup()
-//        viewModelBinding()
-//        fetchData()
+        viewModelBinding()
+        fetchData()
     }
     
     
@@ -51,21 +51,28 @@ class cardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
         
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-          //  return viewModel.numberOfProfiles
-            return 10
+           return viewModel.numberOfProfiles
         }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardCollectionViewCell", for: indexPath) as! cardCollectionViewCell
             
+            let profile = viewModel.getProfile(at: indexPath.row)
+                cell.nameLabel.text = "\(profile.profile_first_name ?? "") \(profile.profile_last_name ?? "")"
+            cell.companyLabel.text = "\(profile.profile_job_title ?? "") at  \(profile.profile_company_name ?? "")"
+            if indexPath.item == 1  || indexPath.item == 3{
+                    cell.switchControl.isOn = false
+                }
             return cell
         }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let collectionViewWidth = collectionView.frame.width
         let cellWidth = collectionViewWidth * (0.90) 
-        let cellHeight = collectionView.frame.height
+        let cellHeight = collectionView.frame.height 
         return CGSize(width: cellWidth, height: cellHeight)
     }
 
     }
+
+    

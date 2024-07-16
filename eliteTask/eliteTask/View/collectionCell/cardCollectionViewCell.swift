@@ -10,10 +10,11 @@ import UIKit
 class cardCollectionViewCell: UICollectionViewCell {
     
     
-    
+    @IBOutlet weak var switchControl: UISwitch!
     @IBOutlet weak var userimage: UIImageView!
     @IBOutlet weak var greenimage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var companyLabel: UILabel!
     
     @IBOutlet weak var View1: UIView!
     @IBOutlet weak var View2: UIView!
@@ -29,11 +30,8 @@ class cardCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         viewSetup()
-        writeNFCButton.backgroundColor = .lightGray
-        previewButton.backgroundColor = .lightGray
     }
-    
-    
+ 
     func viewSetup(){
         View1.applyShadow()
         View1.applyCornerRadius(10)
@@ -48,14 +46,21 @@ class cardCollectionViewCell: UICollectionViewCell {
         View4.applyCornerRadius(10)
         toggleView.applyShadow()
         toggleView.applyCornerRadius(10)
-        
-        profileView.applyShadow()
+        View1.applyBorder(width: 0.3, color: .systemGray2)
+        View2.applyBorder(width: 0.3, color: .systemGray2)
+        View3.applyBorder(width: 0.3, color: .systemGray2)
+        View4.applyBorder(width: 0.3, color: .systemGray2)
+        profileView.applyBorder(width: 0.3, color: .systemGray2)
+        toggleView.applyBorder(width: 0.3, color: .systemGray2)
         profileView.applyCornerRadius(10)
+        profileView.applyShadow()
         
         userimage.applyCornerRadius(userimage.frame.size.width / 2)
         userimage.applyBorder(width: 3.0, color: UIColor.white)
         
         greenimage.roundTopCorners(radius: 10)
+        writeNFCButton.backgroundColor = .systemGray5
+        previewButton.backgroundColor = .systemGray5
         
     }
     
