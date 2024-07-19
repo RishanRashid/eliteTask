@@ -11,20 +11,12 @@ import UIKit
 extension UIView {
     
     func applyShadow() {
-            layer.masksToBounds = false
-            layer.shadowOpacity = 0.5
-            layer.shadowOffset = CGSize(width: 0, height: 4)
-            layer.shadowRadius = 6
-            
-            if superview != nil {
-                layer.shadowColor = UIColor.gray.cgColor
-            } else {
-                layer.shadowColor = UIColor.black.cgColor
-            }
-            
-            if backgroundColor == nil {
-                backgroundColor = .white 
-            }
+  layer.shadowColor = UIColor.systemGray4.cgColor
+        layer.shadowOffset = CGSize(width: 2, height: 2)
+      layer.shadowOpacity = 1
+        layer.masksToBounds = false
+        layer.shadowRadius = 4.0
+
         }
     
     func applyCornerRadius(_ radius: CGFloat) {

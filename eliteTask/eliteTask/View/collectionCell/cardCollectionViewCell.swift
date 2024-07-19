@@ -31,30 +31,26 @@ class cardCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         viewSetup()
     }
+   
  
     func viewSetup(){
-        View1.applyShadow()
-        View1.applyCornerRadius(10)
-        
-        View2.applyShadow()
-        View2.applyCornerRadius(10)
-        
-        View3.applyShadow()
-        View3.applyCornerRadius(10)
-        
-        View4.applyShadow()
-        View4.applyCornerRadius(10)
-        toggleView.applyShadow()
-        toggleView.applyCornerRadius(10)
-        View1.applyBorder(width: 0.3, color: .systemGray2)
-        View2.applyBorder(width: 0.3, color: .systemGray2)
-        View3.applyBorder(width: 0.3, color: .systemGray2)
-        View4.applyBorder(width: 0.3, color: .systemGray2)
-        profileView.applyBorder(width: 0.3, color: .systemGray2)
-        toggleView.applyBorder(width: 0.3, color: .systemGray2)
         profileView.applyCornerRadius(10)
         profileView.applyShadow()
         
+        toggleView.applyCornerRadius(10)
+        toggleView.applyShadow()
+        
+        View1.applyCornerRadius(10)
+        View1.applyShadow()
+        View2.applyCornerRadius(10)
+        View2.applyShadow()
+        
+        View4.applyCornerRadius(10)
+        View4.applyShadow()
+        View3.applyCornerRadius(10)
+        View3.applyShadow()
+        
+ 
         userimage.applyCornerRadius(userimage.frame.size.width / 2)
         userimage.applyBorder(width: 3.0, color: UIColor.white)
         

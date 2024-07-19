@@ -6,14 +6,20 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class cardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     private let viewModel = mainViewModel()
     @IBOutlet weak var collectionView: UICollectionView!
+    var activityIndicator : NVActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let frame = CGRect(x: self.view.bounds.width/2 - 25, y: self.view.bounds.height/2 - 25, width: 45, height: 45)
+        activityIndicator = NVActivityIndicatorView(frame: frame, type: .ballRotate, color: .blue, padding: nil)
+        self.view.addSubview(activityIndicator)
+        activityIndicator.isHidden = false
         collectionSetup()
         viewModelBinding()
         fetchData()
@@ -29,50 +35,67 @@ class cardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         layout.itemSize = CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
         layout.minimumLineSpacing = 2
         collectionView.collectionViewLayout = layout
-}
+    }
     
     func fetchData() {
-            viewModel.fetchProfiles()
-        }
-    
-        
-     func viewModelBinding() {
-           viewModel.onProfilesUpdated = { [weak self] in
-               self?.collectionView.reloadData()
-           }
-           
-           viewModel.onError = { [weak self] errorMessage in
-               let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
-               alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-               self?.present(alert, animated: true, completion: nil)
-           }
-       }
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
+        viewModel.fetchProfiles()
+    }
     
     
-        
-        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-           return viewModel.numberOfProfiles
-        }
-        
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardCollectionViewCell", for: indexPath) as! cardCollectionViewCell
+    func viewModelBinding() {
+            viewModel.onProfilesUpdated = { [weak self] in
+                self?.collectionView.reloadData()
+                self?.stopActivityIndicator()
+            }
             
-            let profile = viewModel.getProfile(at: indexPath.row)
-                cell.nameLabel.text = "\(profile.profile_first_name ?? "") \(profile.profile_last_name ?? "")"
-            cell.companyLabel.text = "\(profile.profile_job_title ?? "") at  \(profile.profile_company_name ?? "")"
-            if indexPath.item == 1  || indexPath.item == 3{
-                    cell.switchControl.isOn = false
-                }
-            return cell
+            viewModel.onError = { [weak self] errorMessage in
+                let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self?.present(alert, animated: true, completion: nil)
+                self?.stopActivityIndicator()
+            }
         }
         
+        func stopActivityIndicator() {
+            DispatchQueue.main.async  { [weak self] in
+                self?.activityIndicator.stopAnimating()
+                self?.activityIndicator.isHidden = true
+            }
+        }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.numberOfProfiles
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardCollectionViewCell", for: indexPath) as! cardCollectionViewCell
+        
+        let profile = viewModel.getProfile(at: indexPath.row)
+        cell.nameLabel.text = "\(profile.profile_first_name ?? "") \(profile.profile_last_name ?? "")"
+        cell.companyLabel.text = "\(profile.profile_job_title ?? "") at  \(profile.profile_company_name ?? "")"
+        if indexPath.item == 1  || indexPath.item == 3{
+            cell.switchControl.isOn = false
+        }
+        
+//        if let imageUrlString = profile.profile_image_name, let imageUrl = URL(string: imageUrlString) {
+//                    serviceFile.shared.downloadImage(from: imageUrl) { image in
+//                        DispatchQueue.main.async {
+//                            cell.userimage.image = image
+//                        }
+//                    }
+//                } else {
+//                    cell.userimage.image = UIImage(named: "placeholder")
+//                }
+        return cell
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let collectionViewWidth = collectionView.frame.width
-        let cellWidth = collectionViewWidth * (0.90) 
-        let cellHeight = collectionView.frame.height 
+        let cellWidth = collectionViewWidth * (0.90)
+        let cellHeight = collectionView.frame.height
         return CGSize(width: cellWidth, height: cellHeight)
     }
-
     }
-
-    

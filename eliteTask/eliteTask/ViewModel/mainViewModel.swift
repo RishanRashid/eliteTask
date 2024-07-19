@@ -14,17 +14,18 @@ class mainViewModel {
         var onProfilesUpdated: (() -> Void)?
         var onError: ((String) -> Void)?
         
-        func fetchProfiles() {
+    func fetchProfiles(completion: (() -> Void)? = nil) {
             profileService.fetchProfiles { [weak self] result in
                 switch result {
                 case .success(let employeesModel):
                     self?.profiles = employeesModel.profiles
-                    print("Received Profiles: \(self?.profiles ?? [])") // Print received profiles
+                    print("Received Profiles: \(self?.profiles ?? [])")
                     self?.onProfilesUpdated?()
                 case .failure(let error):
                     self?.onError?(error.localizedDescription)
                     print("Error fetching profiles: \(error.localizedDescription)")
                 }
+                completion?()
             }
         }
         
