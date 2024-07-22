@@ -28,7 +28,9 @@
 		AE6CEC502C427533000BF4A0 /* prosepectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6CEC4F2C427533000BF4A0 /* prosepectViewController.swift */; };
 		AE6CEC522C427545000BF4A0 /* shareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6CEC512C427545000BF4A0 /* shareViewController.swift */; };
 		AE6CEC542C427559000BF4A0 /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6CEC532C427559000BF4A0 /* settingsViewController.swift */; };
-		AE746C022C4671DF00C4F19D /* employeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE746C012C4671DE00C4F19D /* employeeModel.swift */; };
+		AE8AF6492C4E270500781C57 /* employeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8AF6482C4E270500781C57 /* employeeModel.swift */; };
+		AE8AF64A2C4E270500781C57 /* employeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8AF6482C4E270500781C57 /* employeeModel.swift */; };
+		AE8AF64B2C4E270500781C57 /* employeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8AF6482C4E270500781C57 /* employeeModel.swift */; };
 		AEE690382C429C9900F56CE1 /* cardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE690362C429C9900F56CE1 /* cardCollectionViewCell.swift */; };
 		AEE690392C429C9900F56CE1 /* cardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE690372C429C9900F56CE1 /* cardCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -71,7 +73,7 @@
 		AE6CEC4F2C427533000BF4A0 /* prosepectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prosepectViewController.swift; sourceTree = "<group>"; };
 		AE6CEC512C427545000BF4A0 /* shareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shareViewController.swift; sourceTree = "<group>"; };
 		AE6CEC532C427559000BF4A0 /* settingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
-		AE746C012C4671DE00C4F19D /* employeeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = employeeModel.swift; path = ../../../../../.Trash/employeeModel.swift; sourceTree = "<group>"; };
+		AE8AF6482C4E270500781C57 /* employeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = employeeModel.swift; sourceTree = "<group>"; };
 		AEE690362C429C9900F56CE1 /* cardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardCollectionViewCell.swift; sourceTree = "<group>"; };
 		AEE690372C429C9900F56CE1 /* cardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cardCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,7 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				AE1619162C423C590027D92F /* Helper.swift */,
-				AE746C012C4671DE00C4F19D /* employeeModel.swift */,
+				AE8AF6482C4E270500781C57 /* employeeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -351,13 +353,13 @@
 				AE6CEC522C427545000BF4A0 /* shareViewController.swift in Sources */,
 				AE1618E12C423BCC0027D92F /* SceneDelegate.swift in Sources */,
 				AEE690382C429C9900F56CE1 /* cardCollectionViewCell.swift in Sources */,
-				AE746C022C4671DF00C4F19D /* employeeModel.swift in Sources */,
 				AE62894D2C4E2291001B0055 /* serviceFile.swift in Sources */,
 				AE6CEC4E2C427525000BF4A0 /* cardViewController.swift in Sources */,
 				AE6CEC502C427533000BF4A0 /* prosepectViewController.swift in Sources */,
 				AE1619172C423C590027D92F /* Helper.swift in Sources */,
 				AE16191F2C423D1A0027D92F /* mainViewModel.swift in Sources */,
 				AE6CEC542C427559000BF4A0 /* settingsViewController.swift in Sources */,
+				AE8AF6492C4E270500781C57 /* employeeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +369,7 @@
 			files = (
 				AE1618F92C423BCE0027D92F /* eliteTaskTests.swift in Sources */,
 				AE62894E2C4E2291001B0055 /* serviceFile.swift in Sources */,
+				AE8AF64A2C4E270500781C57 /* employeeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +380,7 @@
 				AE1619032C423BCE0027D92F /* eliteTaskUITests.swift in Sources */,
 				AE62894F2C4E2291001B0055 /* serviceFile.swift in Sources */,
 				AE1619052C423BCE0027D92F /* eliteTaskUITestsLaunchTests.swift in Sources */,
+				AE8AF64B2C4E270500781C57 /* employeeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
