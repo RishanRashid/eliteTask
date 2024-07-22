@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE0C64A12C4A5A5D0009305D /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = AE0C64A02C4A5A5D0009305D /* NVActivityIndicatorView */; };
-		AE0C64A32C4A5A5D0009305D /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = AE0C64A22C4A5A5D0009305D /* NVActivityIndicatorViewExtended */; };
+		AE0C64A62C4A64C50009305D /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = AE0C64A52C4A64C50009305D /* NVActivityIndicatorView */; };
+		AE0C64A92C4A64D10009305D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AE0C64A82C4A64D10009305D /* Alamofire */; };
+		AE0C64AB2C4A64D10009305D /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AE0C64AA2C4A64D10009305D /* AlamofireDynamic */; };
 		AE1618DF2C423BCC0027D92F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1618DE2C423BCC0027D92F /* AppDelegate.swift */; };
 		AE1618E12C423BCC0027D92F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1618E02C423BCC0027D92F /* SceneDelegate.swift */; };
 		AE1618E62C423BCC0027D92F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1618E42C423BCC0027D92F /* Main.storyboard */; };
@@ -28,8 +29,6 @@
 		AE746C042C4671FC00C4F19D /* serviceFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE746C032C4671FC00C4F19D /* serviceFile.swift */; };
 		AEE690382C429C9900F56CE1 /* cardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE690362C429C9900F56CE1 /* cardCollectionViewCell.swift */; };
 		AEE690392C429C9900F56CE1 /* cardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE690372C429C9900F56CE1 /* cardCollectionViewCell.xib */; };
-		AEFDCFD32C426FD00067EB9F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AEFDCFD22C426FD00067EB9F /* Alamofire */; };
-		AEFDCFD52C426FD00067EB9F /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AEFDCFD42C426FD00067EB9F /* AlamofireDynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,10 +79,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEFDCFD32C426FD00067EB9F /* Alamofire in Frameworks */,
-				AE0C64A32C4A5A5D0009305D /* NVActivityIndicatorViewExtended in Frameworks */,
-				AEFDCFD52C426FD00067EB9F /* AlamofireDynamic in Frameworks */,
-				AE0C64A12C4A5A5D0009305D /* NVActivityIndicatorView in Frameworks */,
+				AE0C64A62C4A64C50009305D /* NVActivityIndicatorView in Frameworks */,
+				AE0C64AB2C4A64D10009305D /* AlamofireDynamic in Frameworks */,
+				AE0C64A92C4A64D10009305D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,10 +220,9 @@
 			);
 			name = eliteTask;
 			packageProductDependencies = (
-				AEFDCFD22C426FD00067EB9F /* Alamofire */,
-				AEFDCFD42C426FD00067EB9F /* AlamofireDynamic */,
-				AE0C64A02C4A5A5D0009305D /* NVActivityIndicatorView */,
-				AE0C64A22C4A5A5D0009305D /* NVActivityIndicatorViewExtended */,
+				AE0C64A52C4A64C50009305D /* NVActivityIndicatorView */,
+				AE0C64A82C4A64D10009305D /* Alamofire */,
+				AE0C64AA2C4A64D10009305D /* AlamofireDynamic */,
 			);
 			productName = eliteTask;
 			productReference = AE1618DB2C423BCC0027D92F /* eliteTask.app */;
@@ -300,8 +297,8 @@
 			);
 			mainGroup = AE1618D22C423BCC0027D92F;
 			packageReferences = (
-				AEFDCFD12C426FD00067EB9F /* XCRemoteSwiftPackageReference "Alamofire" */,
-				AE0C649F2C4A5A5D0009305D /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+				AE0C64A42C4A64C50009305D /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+				AE0C64A72C4A64D10009305D /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = AE1618DC2C423BCC0027D92F /* Products */;
 			projectDirPath = "";
@@ -711,7 +708,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AE0C649F2C4A5A5D0009305D /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+		AE0C64A42C4A64C50009305D /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
 			requirement = {
@@ -719,7 +716,7 @@
 				minimumVersion = 5.2.0;
 			};
 		};
-		AEFDCFD12C426FD00067EB9F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		AE0C64A72C4A64D10009305D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -730,24 +727,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AE0C64A02C4A5A5D0009305D /* NVActivityIndicatorView */ = {
+		AE0C64A52C4A64C50009305D /* NVActivityIndicatorView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AE0C649F2C4A5A5D0009305D /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			package = AE0C64A42C4A64C50009305D /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
 			productName = NVActivityIndicatorView;
 		};
-		AE0C64A22C4A5A5D0009305D /* NVActivityIndicatorViewExtended */ = {
+		AE0C64A82C4A64D10009305D /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AE0C649F2C4A5A5D0009305D /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
-			productName = NVActivityIndicatorViewExtended;
-		};
-		AEFDCFD22C426FD00067EB9F /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AEFDCFD12C426FD00067EB9F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = AE0C64A72C4A64D10009305D /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		AEFDCFD42C426FD00067EB9F /* AlamofireDynamic */ = {
+		AE0C64AA2C4A64D10009305D /* AlamofireDynamic */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AEFDCFD12C426FD00067EB9F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = AE0C64A72C4A64D10009305D /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = AlamofireDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
