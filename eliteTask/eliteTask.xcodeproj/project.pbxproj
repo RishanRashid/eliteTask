@@ -21,12 +21,14 @@
 		AE1619052C423BCE0027D92F /* eliteTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1619042C423BCE0027D92F /* eliteTaskUITestsLaunchTests.swift */; };
 		AE1619172C423C590027D92F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1619162C423C590027D92F /* Helper.swift */; };
 		AE16191F2C423D1A0027D92F /* mainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE16191E2C423D1A0027D92F /* mainViewModel.swift */; };
+		AE62894D2C4E2291001B0055 /* serviceFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE62894C2C4E2291001B0055 /* serviceFile.swift */; };
+		AE62894E2C4E2291001B0055 /* serviceFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE62894C2C4E2291001B0055 /* serviceFile.swift */; };
+		AE62894F2C4E2291001B0055 /* serviceFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE62894C2C4E2291001B0055 /* serviceFile.swift */; };
 		AE6CEC4E2C427525000BF4A0 /* cardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6CEC4D2C427525000BF4A0 /* cardViewController.swift */; };
 		AE6CEC502C427533000BF4A0 /* prosepectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6CEC4F2C427533000BF4A0 /* prosepectViewController.swift */; };
 		AE6CEC522C427545000BF4A0 /* shareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6CEC512C427545000BF4A0 /* shareViewController.swift */; };
 		AE6CEC542C427559000BF4A0 /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6CEC532C427559000BF4A0 /* settingsViewController.swift */; };
 		AE746C022C4671DF00C4F19D /* employeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE746C012C4671DE00C4F19D /* employeeModel.swift */; };
-		AE746C042C4671FC00C4F19D /* serviceFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE746C032C4671FC00C4F19D /* serviceFile.swift */; };
 		AEE690382C429C9900F56CE1 /* cardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE690362C429C9900F56CE1 /* cardCollectionViewCell.swift */; };
 		AEE690392C429C9900F56CE1 /* cardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE690372C429C9900F56CE1 /* cardCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -64,12 +66,12 @@
 		AE1619042C423BCE0027D92F /* eliteTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eliteTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AE1619162C423C590027D92F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		AE16191E2C423D1A0027D92F /* mainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewModel.swift; sourceTree = "<group>"; };
+		AE62894C2C4E2291001B0055 /* serviceFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = serviceFile.swift; sourceTree = "<group>"; };
 		AE6CEC4D2C427525000BF4A0 /* cardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardViewController.swift; sourceTree = "<group>"; };
 		AE6CEC4F2C427533000BF4A0 /* prosepectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prosepectViewController.swift; sourceTree = "<group>"; };
 		AE6CEC512C427545000BF4A0 /* shareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shareViewController.swift; sourceTree = "<group>"; };
 		AE6CEC532C427559000BF4A0 /* settingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
 		AE746C012C4671DE00C4F19D /* employeeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = employeeModel.swift; path = ../../../../../.Trash/employeeModel.swift; sourceTree = "<group>"; };
-		AE746C032C4671FC00C4F19D /* serviceFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = serviceFile.swift; path = ../../../../../.Trash/serviceFile.swift; sourceTree = "<group>"; };
 		AEE690362C429C9900F56CE1 /* cardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardCollectionViewCell.swift; sourceTree = "<group>"; };
 		AEE690372C429C9900F56CE1 /* cardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cardCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				AE16191E2C423D1A0027D92F /* mainViewModel.swift */,
-				AE746C032C4671FC00C4F19D /* serviceFile.swift */,
+				AE62894C2C4E2291001B0055 /* serviceFile.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -346,11 +348,11 @@
 			files = (
 				AE1618E92C423BCC0027D92F /* eliteTask.xcdatamodeld in Sources */,
 				AE1618DF2C423BCC0027D92F /* AppDelegate.swift in Sources */,
-				AE746C042C4671FC00C4F19D /* serviceFile.swift in Sources */,
 				AE6CEC522C427545000BF4A0 /* shareViewController.swift in Sources */,
 				AE1618E12C423BCC0027D92F /* SceneDelegate.swift in Sources */,
 				AEE690382C429C9900F56CE1 /* cardCollectionViewCell.swift in Sources */,
 				AE746C022C4671DF00C4F19D /* employeeModel.swift in Sources */,
+				AE62894D2C4E2291001B0055 /* serviceFile.swift in Sources */,
 				AE6CEC4E2C427525000BF4A0 /* cardViewController.swift in Sources */,
 				AE6CEC502C427533000BF4A0 /* prosepectViewController.swift in Sources */,
 				AE1619172C423C590027D92F /* Helper.swift in Sources */,
@@ -364,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE1618F92C423BCE0027D92F /* eliteTaskTests.swift in Sources */,
+				AE62894E2C4E2291001B0055 /* serviceFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE1619032C423BCE0027D92F /* eliteTaskUITests.swift in Sources */,
+				AE62894F2C4E2291001B0055 /* serviceFile.swift in Sources */,
 				AE1619052C423BCE0027D92F /* eliteTaskUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
